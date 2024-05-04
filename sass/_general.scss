@@ -1,0 +1,474 @@
+.header {
+    height: 70px;
+    width: 100%;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    .header_items {
+        height: 70px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header_logo {
+            width: 190px;
+        }
+        .header_menu {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            .header_category {
+                width: 65px;
+                background: none;
+                border: none;
+                outline: none;
+                font-weight: 500;
+            }
+            .header_link {
+                color: #000;
+                text-decoration: none;
+                font-weight: 700;
+            }
+            .header_btn {
+                height: 30px;
+                padding: 0 30px;
+                border-radius: 15px;
+                background: none;
+                border: none;
+                box-shadow: 0 0 15px 5px gainsboro;
+                color: $main-color;
+                font-weight: 500;
+                transition: 0.3s all;
+                &:hover {
+                    transition: 0.3s all;
+                    background-color: $main-color;
+                    color: #fff;
+                }
+            }
+            .header_call {
+                height: 35px;
+                width: 35px;
+                border-radius: 100%;
+                background-color: #fff;
+                border: 2px solid $main-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: $main-color;
+                font-size: 18px;
+                transition: 0.3s all;
+                &:hover {
+                    transition: 0.3s all;
+                    color: #fff;
+                    background-color: $main-color;
+                }
+            }
+            .header_language {
+                background: none;
+                border: none;
+                outline: none;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.promo {
+    height: 400px;
+    width: 96%;
+    background-color: $main-color;
+    border-radius: 25px;
+    margin: 0 auto;
+    .promo_items {
+        height: 400px;
+        width: 100%;
+        padding: 50px 0;
+        .promo_title {
+            font-size: 37px;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+        }
+        .promo_subtitle {
+            font-size: 26px;
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .promo_btns {
+            height: 35px;
+            width: 320px;
+            border-radius: 20px;
+            background-color: #fff;
+            margin: 35px auto;
+            padding: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button {
+                height: 100%;
+                padding: 0 15px;
+                border-radius: 20px;
+                background: none;
+                border: none;
+                &:first-child {
+                    background-color: gold;
+                    color: #fff;
+                }
+            }
+        }
+        .promo_search {
+            width: 85%;
+            height: 55px;
+            background-color: #fff;
+            border-radius: 5px 0 0 5px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px;
+            input {
+                width: 95%;
+                height: 50px;
+                padding-left: 15px;
+                background: none;
+                border: none;
+                outline: none;
+            }
+            button {
+                height: 50px;
+                width: 50px;
+                border-radius: 5px;
+                background-color: gold;
+                color: #fff;
+                font-size: 25px;
+                border: none;
+            }
+        }
+    }
+}
+
+// стили для => .catalog_list { list-style: none; margin: 0; padding: 0;}
+
+.catalog {
+    height: 600px;
+    width: 100%;
+    .catalog_items {
+        height: 600px;
+        width: 100%;
+        border: 1px soid red;
+        padding-top: 35px;
+        .catalog_btns {
+            display: flex;
+            justify-content: space-evenly;
+            button {
+                padding: 0 25px;
+                border-radius: 25px;
+                background-color: #fff;
+                color: $main-color;
+                font-weight: 500;
+                border: 2px solid $main-color;
+                &:first-child {
+                    background-color: $main-color;
+                    color: #fff;
+                }
+            }
+        }
+        .catalog_content {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-evenly;
+            .catalog_list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    padding: 10px 0;
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                        margin-left: 10px;
+                        transition: 0.3s all;
+                        &:hover {
+                            transition: 0.3s all;
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .catalog_btn {
+            @include btn-style;
+            margin-top: 50px;
+        }
+    }
+}
+
+.info {
+    height: 600px;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    .info_items {
+        height: 600px;
+        width: 100%;
+        padding-top: 35px;
+        .info_title {
+            @include title-style;
+        }
+        .info_content {
+            height: 400px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            margin-top: 30px;
+            .info_item {
+                height: 48%;
+                width: 49%;
+                display: flex;
+                .item_text {
+                    padding-top: 10px;
+                    .item_title {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+        .info_btn {
+            @include btn-style;
+            margin-top: 30px;
+        }
+    }
+}
+
+.advantages {
+    height: 650px;
+    width: 100%;
+    .advantages_items {
+        height: 650px;
+        width: 100%;
+        padding-top: 30px;
+        .advantages_title {
+            @include title-style;
+        }
+        .advantages_content {
+            margin-top: 30px;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            .advantages_item {
+                height: 48%;
+                width: 49%;
+                padding-left: 25px;
+                padding-top: 20px;
+                border-left: 5px solid $main-color;
+                box-shadow: 0 0 15px 5px gainsboro;
+                .item_title {
+                    font-size: 25px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+.app {
+    height: 550px;
+    width: 100%;
+    .app_items {
+        height: 550px;
+        width: 100%;
+        display: flex;
+        .app_info {
+            height: 100%;
+            width: 50%;
+            padding-top: 35px;
+            .app_title {
+                @include title-style;
+                text-align: left;
+                font-size: 33px;
+            }
+            .app_subtitle {
+                font-size: 20px;
+                margin-top: 25px;
+            }
+        }
+        .app_bg {
+            height: 100%;
+            width: 50%;
+            background: url('../img/phone.png') center center/cover no-repeat;
+        }
+    }
+}
+
+.join {
+    height: 300px;
+    width: 100%;
+    .join_items {
+        height: 300px;
+        width: 100%;
+        display: flex;
+        border-radius: 35px;
+        .join_bg {
+            height: 100%;
+            width: 50%;
+            border-radius: 35px 0 0 35px;
+            background: url('../img/bg-join.jpg') left center/cover no-repeat;
+        }
+        .join_info {
+            height: 100%;
+            width: 50%;
+            border-radius: 0 35px 35px 0;
+            background-color: $main-color;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .join_title {
+                font-size: 21px;
+                text-align: center;
+                color: #fff;
+                font-weight: 400;
+            }
+            .join_btn {
+                @include btn-style;
+                box-shadow: none;
+                margin-top: 35px;
+            }
+        }
+    }
+}
+
+.questions {
+    height: 550px;
+    width: 100%;
+    .questions_items {
+        height: 550px;
+        width: 100%;
+        padding-top: 30px;
+        .questions_title {
+            @include title-style;
+        }
+        .questions_content {
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            .questions_list {
+                width: 50%;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    padding: 10px 0;
+                    display: flex;
+                    align-items: center;
+                    button {
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 4px;
+                        background-color: $main-color;
+                        color: #fff;
+                        border: none;
+                        font-size: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding-bottom: 4px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    height: 400px;
+    width: 100%;
+    background-color: #353535;
+    .footer_items {
+        height: 400px;
+        width: 100%;
+        .footer_main {
+            height: 50%;
+            width: 100%;
+            padding-top: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            border-bottom: 1px solid gray;
+            .footer_logo {
+                font-size: 27px;
+                color: gray;
+                text-decoration: none;
+                transition: 0.3s all;
+                i {
+                    color: $main-color;
+                }
+                &:hover {
+                    transition: 0.3s all;
+                    color: lightgray;
+                }
+            }
+            .footer_language {
+                padding-top: 10px;
+                i {
+                    color: $main-color;
+                }
+                select {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    color: gray;
+                }
+            }
+            .footer_list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: gray;
+                        transition: 0.3s all;
+                        &:hover {
+                            transition: 0.3s all;
+                            color: lightgray;
+                        }
+                    }
+                }
+            }
+            .footer_socials {
+                color: gray;
+                .footer_socials-icons {
+                    display: flex;
+                    justify-content: space-evenly;
+                    a {
+                        font-size: 25px;
+                        color: gray;
+                        text-decoration: none;
+                        transition: 0.3s all;
+                        &:hover {
+                            transition: 0.3s all;
+                            color: lightgray;
+                        }
+                    }
+                }
+            }
+        }
+        .footer_descr {
+            padding-top: 30px;
+            .footer_app-text {
+                color: gray;
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@mixin btn-style {
+    display: block;
+    height: 40px;
+    padding: 0 30px;
+    border-radius: 25px;
+    margin: 0 auto;
+    background-color: #fff;
+    color: $main-color;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0 0 15px 5px lightgrey;
+    transition: 0.3s all;
+    &:hover {
+        transition: 0.3s all;
+        box-shadow: 0 0 15px 5px lightgreen;
+    }
+}
+
+
+@mixin title-style {
+    font-size: 37px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+}
